@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <body id="date1">
+<!-- <h1 id="h">this is js</h1> -->
+
+<h3>Click the button to display the date.</h3>
+
+<button onclick="displayDate()">Today</button>
+
+<script>
+function displayDate() 
+{
+  document.getElementById("date1").innerHTML = Date();
+}
+
+function ChangeColor()
+{
+    var day=document.getElementById("date1").style.backgroundColor="red";
+}
+</script>
+
+<!-- <script>
+     var n1=+prompt("enter 1st value");
+        var n2=+prompt("enter 2nd value");
+            
+          var result  = Addition(n1,n2);
+          //document.write(result);
+            document.write(Addition(n1,n2));
+        function Addition(number1,number2)
+        {
+	        //document.write(number1+number2+"<br>");
+            return number1+number2;
+        }
+</script>  -->
+ 
+
+
+      <select id="select1" onclick="ChangeColor()">
+          <option value="Select Day">Select Day</option>
+          <option value="SUNDAY">SUNDAY</option>
+          <option value="MONDAY">MONDAY</option>
+          <option value="TUESDAY">TUESDAY</option>
+          <option value="WEDNESDAY">WEDNESDAY</option>
+          <option value="THURSDAY">THURSDAY</option>
+          <option value="FRIDAY">FRIDAY</option>
+          <option value="SATURDAY">SATURDAY</option>
+      </select>
+      <script>
+          function ChangeColor()
+          {
+          var Day=document.getElementById("select1").value;
+          switch(Day)
+          {
+              case "SUNDAY":
+                  document.getElementById("body1").style.backgroundImage="url('images1.jpg')";
+                  break;
+              case "MONDAY":
+                  document.getElementById("body1").style.backgroundImage="url('images2.png')";
+                  break;
+              case "TUESDAY":
+                  document.getElementById("body1").style.backgroundImage="url('images3.jpg')";
+                  break;
+              case "WEDNESDAY":
+                  document.getElementById("body1").style.backgroundImage="url('images4.jpg')";
+                  break;
+              case "THURSDAY":
+                  document.getElementById("body1").style.backgroundImage="url('images5.jpg')";
+                  break;
+              case "FRIDAY":
+                  document.getElementById("body1").style.backgroundImage="url('images6.jpg')";
+                  break;
+              case "SATURDAY":
+                  document.getElementById("body1").style.backgroundImage="url('images7.jpg')";
+                  break;
+
+              default:
+                  document.getElementById("body1").style.backgroundColor="white";
+          }
+      }
+      </script>
+</body>
+</html> 
